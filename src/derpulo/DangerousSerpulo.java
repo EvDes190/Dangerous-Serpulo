@@ -1,4 +1,4 @@
-package dangerousserpulo;
+package derpulo;
 
 import arc.*;
 import arc.math.Mathf;
@@ -7,7 +7,7 @@ import mindustry.core.GameState;
 import mindustry.game.EventType;
 import mindustry.gen.Call;
 import mindustry.mod.*;
-import dangerousserpulo.content.*;
+import derpulo.content.*;
 import mindustry.type.Sector;
 
 import static mindustry.Vars.*;

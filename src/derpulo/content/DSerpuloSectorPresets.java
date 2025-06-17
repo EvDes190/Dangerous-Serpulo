@@ -1,7 +1,7 @@
-package dangerousserpulo.content;
+package derpulo.content;
 
 import mindustry.type.*;
-import dangerousserpulo.type.*;
+import derpulo.type.*;
 
 public class DSerpuloSectorPresets{
     public static SectorPreset

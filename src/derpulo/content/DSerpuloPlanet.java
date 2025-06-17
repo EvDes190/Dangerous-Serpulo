@@ -1,7 +1,7 @@
-package dangerousserpulo.content;
+package derpulo.content;
 
 import arc.graphics.Color;
-import dangerousserpulo.maps.planet.DSerpuloPlanetGenerator;
+import derpulo.maps.planet.DSerpuloPlanetGenerator;
 import mindustry.content.Planets;
 import mindustry.game.Team;
 import mindustry.graphics.Pal;

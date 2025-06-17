@@ -1,4 +1,4 @@
-package dangerousserpulo.type;
+package derpulo.type;
 
 import mindustry.type.*;
 

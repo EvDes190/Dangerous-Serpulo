@@ -1,10 +1,10 @@
-package dangerousserpulo.content;
+package derpulo.content;
 
 import arc.struct.*;
 import mindustry.game.Objectives.*;
 
 import static mindustry.content.Blocks.*;
-import static dangerousserpulo.content.DSerpuloSectorPresets.*;
+import static derpulo.content.DSerpuloSectorPresets.*;
 import static mindustry.content.TechTree.*;
 import static mindustry.content.UnitTypes.*;
 import mindustry.content.*;

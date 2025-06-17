@@ -1,4 +1,4 @@
-package dangerousserpulo.maps.planet;
+package derpulo.maps.planet;
 
 import mindustry.maps.planet.SerpuloPlanetGenerator;
 import mindustry.type.*;
