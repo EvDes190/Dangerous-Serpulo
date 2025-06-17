@@ -1,7 +1,7 @@
 package dangerousserpulo.content;
 
 import arc.graphics.Color;
-import dangerousserpulo.maps.planet.DSerpuloPlanetGenerator;
+import dangerousserpulo.maps.planet.DerpuloPlanetGenerator;
 import mindustry.content.Planets;
 import mindustry.game.Team;
 import mindustry.graphics.Pal;
@@ -10,14 +10,14 @@ import mindustry.graphics.g3d.HexSkyMesh;
 import mindustry.graphics.g3d.MultiMesh;
 import mindustry.type.Planet;
 
-public class DSerpuloPlanet{
-    public static Planet dserpulo;
+public class DerpuloPlanet {
+    public static Planet derpulo;
 
     //TODO add difficulty
     public static void load(){
 
-        dserpulo = new Planet("DangerousSerpulo", Planets.sun, 1f, 3){{
-            generator = new DSerpuloPlanetGenerator();
+        derpulo = new Planet("Derpulo", Planets.sun, 1f, 3){{
+            generator = new DerpuloPlanetGenerator();
             meshLoader = () -> new HexMesh(this, 6);
             cloudMeshLoader = () -> new MultiMesh(
                     new HexSkyMesh(this, 11, 0.15f, 0.13f, 5, new Color().set(Pal.spore).mul(0.9f).a(0.75f), 2, 0.45f, 0.9f, 0.38f),
