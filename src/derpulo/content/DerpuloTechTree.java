@@ -4,26 +4,28 @@ import arc.struct.*;
 import mindustry.game.Objectives.*;
 
 import static mindustry.content.Blocks.*;
-import static derpulo.content.DSerpuloSectorPresets.*;
+
+import static derpulo.content.DerpuloSectorPresets.*;
+
 import static mindustry.content.TechTree.*;
 import static mindustry.content.UnitTypes.*;
 import mindustry.content.*;
 import mindustry.type.ItemStack;
 
-public class DSerpuloTechTree{
+public class DerpuloTechTree {
     public static void load(){
-        DSerpuloPlanet.dserpulo.techTree = nodeRoot("dangerous serpulo", coreShard, () -> {
+        DerpuloPlanet.derpulo.techTree = nodeRoot("derpulo", coreShard, () -> {
 
             node(conveyor, () -> {
 
                 node(junction, () -> {
                     node(router, () -> {
-                        node(advancedLaunchPad, Seq.with(new SectorComplete(dsextractionOutpost)), () -> {
-//                            node(landingPad, () -> {
-//                                node(interplanetaryAccelerator, Seq.with(new SectorComplete(planetaryTerminal)), () -> {
-//
-//                                });
-//                            });
+                        node(advancedLaunchPad, Seq.with(new SectorComplete(dextractionOutpost)), () -> {
+                            node(landingPad, () -> {
+                                node(interplanetaryAccelerator, Seq.with(new SectorComplete(dplanetaryTerminal)), () -> {
+
+                                });
+                            });
                         });
 
                         node(distributor);
@@ -33,15 +35,15 @@ public class DSerpuloTechTree{
                                 node(underflowGate);
                             });
                         });
-                        node(container, Seq.with(new SectorComplete(dsbiomassFacility)), () -> {
+                        node(container, Seq.with(new SectorComplete(dbiomassFacility)), () -> {
                             node(unloader);
-                            node(vault, Seq.with(new SectorComplete(dsstainedMountains)), () -> {
+                            node(vault, Seq.with(new SectorComplete(dstainedMountains)), () -> {
 
                             });
                         });
 
                         node(itemBridge, () -> {
-                            node(titaniumConveyor, Seq.with(new SectorComplete(dscraters)), () -> {
+                            node(titaniumConveyor, Seq.with(new SectorComplete(dcraters)), () -> {
                                 node(phaseConveyor, () -> {
                                     node(massDriver, () -> {
 
@@ -83,7 +85,7 @@ public class DSerpuloTechTree{
 
                                 node(bridgeConduit);
 
-                                node(pulseConduit, Seq.with(new SectorComplete(dswindsweptIslands)), () -> {
+                                node(pulseConduit, Seq.with(new SectorComplete(dwindsweptIslands)), () -> {
                                     node(phaseConduit, () -> {
 
                                     });
@@ -104,17 +106,17 @@ public class DSerpuloTechTree{
                 });
 
                 node(graphitePress, () -> {
-                    node(pneumaticDrill, Seq.with(new SectorComplete(dsfrozenForest)), () -> {
-                        node(cultivator, Seq.with(new SectorComplete(dsbiomassFacility)), () -> {
+                    node(pneumaticDrill, Seq.with(new SectorComplete(dfrozenForest)), () -> {
+                        node(cultivator, Seq.with(new SectorComplete(dbiomassFacility)), () -> {
 
                         });
 
                         node(laserDrill, () -> {
-                            node(blastDrill, Seq.with(new SectorComplete(dsnuclearComplex)), () -> {
+                            node(blastDrill, Seq.with(new SectorComplete(dnuclearComplex)), () -> {
 
                             });
 
-                            node(waterExtractor, Seq.with(new SectorComplete(dssaltFlats)), () -> {
+                            node(waterExtractor, Seq.with(new SectorComplete(dsaltFlats)), () -> {
                                 node(oilExtractor, () -> {
 
                                 });
@@ -123,7 +125,7 @@ public class DSerpuloTechTree{
                     });
 
                     node(pyratiteMixer, () -> {
-                        node(blastMixer, Seq.with(new SectorComplete(dsfacility32m)), () -> {
+                        node(blastMixer, Seq.with(new SectorComplete(dfacility32m)), () -> {
 
                         });
                     });
@@ -139,14 +141,14 @@ public class DSerpuloTechTree{
                                 });
                             });
 
-                            node(plastaniumCompressor, Seq.with(new SectorComplete(dswindsweptIslands), new OnSector(dstarFields)), () -> {
-                                node(phaseWeaver, Seq.with(new SectorComplete(dstarFields)), () -> {
+                            node(plastaniumCompressor, Seq.with(new SectorComplete(dwindsweptIslands), new OnSector(dtarFields)), () -> {
+                                node(phaseWeaver, Seq.with(new SectorComplete(dtarFields)), () -> {
 
                                 });
                             });
                         });
 
-                        node(kiln, Seq.with(new OnSector(dscraters)), () -> {
+                        node(kiln, Seq.with(new OnSector(dcraters)), () -> {
                             node(pulverizer, () -> {
                                 node(incinerator, () -> {
                                     node(melter, () -> {
@@ -218,9 +220,9 @@ public class DSerpuloTechTree{
 
                         node(mender, () -> {
                             node(mendProjector, () -> {
-                                node(forceProjector, Seq.with(new SectorComplete(dsimpact0078)), () -> {
-                                    node(overdriveProjector, Seq.with(new SectorComplete(dsimpact0078)), () -> {
-                                        node(overdriveDome, Seq.with(new SectorComplete(dsimpact0078)), () -> {
+                                node(forceProjector, Seq.with(new SectorComplete(dimpact0078)), () -> {
+                                    node(overdriveProjector, Seq.with(new SectorComplete(dimpact0078)), () -> {
+                                        node(overdriveDome, Seq.with(new SectorComplete(dimpact0078)), () -> {
 
                                         });
                                     });
@@ -234,7 +236,7 @@ public class DSerpuloTechTree{
                             });
                         });
 
-                        node(steamGenerator, Seq.with(new SectorComplete(dscraters)), () -> {
+                        node(steamGenerator, Seq.with(new SectorComplete(dcraters)), () -> {
                             node(thermalGenerator, () -> {
                                 node(differentialGenerator, () -> {
                                     node(thoriumReactor, Seq.with(new Research(Liquids.cryofluid)), () -> {
@@ -296,11 +298,11 @@ public class DSerpuloTechTree{
                 });
 
                 node(scatter, () -> {
-                    node(hail, Seq.with(new SectorComplete(dscraters)), () -> {
+                    node(hail, Seq.with(new SectorComplete(dcraters)), () -> {
                         node(salvo, () -> {
                             node(swarmer, () -> {
                                 node(cyclone, () -> {
-                                    node(spectre, Seq.with(new SectorComplete(dsnuclearComplex)), () -> {
+                                    node(spectre, Seq.with(new SectorComplete(dnuclearComplex)), () -> {
 
                                     });
                                 });
@@ -374,7 +376,7 @@ public class DSerpuloTechTree{
                         node(atrax, () -> {
                             node(spiroct, () -> {
                                 node(arkyid, () -> {
-                                    node(toxopid, Seq.with(new SectorComplete(dsmycelialBastion)), () -> {
+                                    node(toxopid, Seq.with(new SectorComplete(dmycelialBastion)), () -> {
 
                                     });
                                 });
@@ -408,7 +410,7 @@ public class DSerpuloTechTree{
                         });
                     });
 
-                    node(navalFactory, Seq.with(new OnSector(dswindsweptIslands)), () -> {
+                    node(navalFactory, Seq.with(new OnSector(dwindsweptIslands)), () -> {
                         node(risso, () -> {
                             node(minke, () -> {
                                 node(bryde, () -> {
@@ -420,11 +422,11 @@ public class DSerpuloTechTree{
                                 });
                             });
 
-                            node(retusa, Seq.with(new SectorComplete(dswindsweptIslands)), () -> {
-                                node(oxynoe, Seq.with(new SectorComplete(dscoastline)), () -> {
+                            node(retusa, Seq.with(new SectorComplete(dwindsweptIslands)), () -> {
+                                node(oxynoe, Seq.with(new SectorComplete(dcoastline)), () -> {
                                     node(cyerce, () -> {
                                         node(aegires, () -> {
-                                            node(navanax, Seq.with(new SectorComplete(dsnavalFortress)), () -> {
+                                            node(navanax, Seq.with(new SectorComplete(dnavalFortress)), () -> {
 
                                             });
                                         });
@@ -435,8 +437,8 @@ public class DSerpuloTechTree{
                     });
                 });
 
-                node(additiveReconstructor, Seq.with(new SectorComplete(dscraters)), () -> {
-                    node(multiplicativeReconstructor, Seq.with(new SectorComplete(dsfrontier)), () -> {
+                node(additiveReconstructor, Seq.with(new SectorComplete(dcraters)), () -> {
+                    node(multiplicativeReconstructor, Seq.with(new SectorComplete(dfrontier)), () -> {
                         node(exponentialReconstructor, () -> {
                             node(tetrativeReconstructor, () -> {
 
@@ -446,34 +448,34 @@ public class DSerpuloTechTree{
                 });
             });
 
-            node(dsgroundZero, () -> {
-                node(dsfrozenForest, Seq.with(
-                        new SectorComplete(dsgroundZero),
+            node(dgroundZero, () -> {
+                node(dfrozenForest, Seq.with(
+                        new SectorComplete(dgroundZero),
                         new Research(junction),
                         new Research(router)
                 ), () -> {
-                    node(dscraters, Seq.with(
-                            new SectorComplete(dsfrozenForest),
+                    node(dcraters, Seq.with(
+                            new SectorComplete(dfrozenForest),
                             new Research(mender),
                             new Research(combustionGenerator)
                     ), () -> {
-                        node(dsfungalPass, Seq.with(
-                                new SectorComplete(dscraters),
+                        node(dfungalPass, Seq.with(
+                                new SectorComplete(dcraters),
                                 new Research(groundFactory),
                                 new Research(dagger)
                         ), () -> {
-                            node(dsfrontier, Seq.with(
-                                    new SectorComplete(dsbiomassFacility),
-                                    new SectorComplete(dsfungalPass),
+                            node(dfrontier, Seq.with(
+                                    new SectorComplete(dbiomassFacility),
+                                    new SectorComplete(dfungalPass),
                                     new Research(groundFactory),
                                     new Research(airFactory),
                                     new Research(additiveReconstructor),
                                     new Research(mace),
                                     new Research(mono)
                             ), () -> {
-                                node(dsovergrowth, Seq.with(
-                                        new SectorComplete(dsfrontier),
-                                        new SectorComplete(dswindsweptIslands),
+                                node(dovergrowth, Seq.with(
+                                        new SectorComplete(dfrontier),
+                                        new SectorComplete(dwindsweptIslands),
                                         new Research(multiplicativeReconstructor),
                                         new Research(fortress),
                                         new Research(ripple),
@@ -481,7 +483,7 @@ public class DSerpuloTechTree{
                                         new Research(cultivator),
                                         new Research(sporePress)
                                 ), () -> {
-                                    node(dsmycelialBastion, Seq.with(
+                                    node(dmycelialBastion, Seq.with(
                                             new Research(atrax),
                                             new Research(spiroct),
                                             new Research(arkyid),
@@ -491,8 +493,8 @@ public class DSerpuloTechTree{
 
                                     });
 
-                                    node(dsatolls, Seq.with(
-                                            new SectorComplete(dswindsweptIslands),
+                                    node(datolls, Seq.with(
+                                            new SectorComplete(dwindsweptIslands),
                                             new Research(multiplicativeReconstructor),
                                             new Research(mega)
                                     ), () -> {
@@ -501,9 +503,9 @@ public class DSerpuloTechTree{
                                 });
                             });
 
-                            node(dstaintedWoods, Seq.with(
-                                    new SectorComplete(dsbiomassFacility),
-                                    new SectorComplete(dsfungalPass),
+                            node(dtaintedWoods, Seq.with(
+                                    new SectorComplete(dbiomassFacility),
+                                    new SectorComplete(dfungalPass),
                                     new Research(Items.sporePod),
                                     new Research(wave)
                             ), () -> {
@@ -511,23 +513,23 @@ public class DSerpuloTechTree{
                             });
                         });
 
-                        node(dsruinousShores, Seq.with(
-                                new SectorComplete(dscraters),
+                        node(druinousShores, Seq.with(
+                                new SectorComplete(dcraters),
                                 new Research(graphitePress),
                                 new Research(kiln),
                                 new Research(mechanicalPump)
                         ), () -> {
-                            node(dswindsweptIslands, Seq.with(
-                                    new SectorComplete(dsruinousShores),
+                            node(dwindsweptIslands, Seq.with(
+                                    new SectorComplete(druinousShores),
                                     new Research(pneumaticDrill),
                                     new Research(hail),
                                     new Research(siliconSmelter),
                                     new Research(steamGenerator)
                             ), () -> {
-                                node(dsseaPort, Seq.with(
-                                        new SectorComplete(dsbiomassFacility),
-                                        new SectorComplete(dsfrontier),
-                                        new SectorComplete(dsfungalPass),
+                                node(dseaPort, Seq.with(
+                                        new SectorComplete(dbiomassFacility),
+                                        new SectorComplete(dfrontier),
+                                        new SectorComplete(dfungalPass),
                                         new Research(navalFactory),
                                         new Research(risso),
                                         new Research(retusa),
@@ -538,31 +540,31 @@ public class DSerpuloTechTree{
 
                                 });
 
-                                node(dstarFields, Seq.with(
-                                        new SectorComplete(dswindsweptIslands),
+                                node(dtarFields, Seq.with(
+                                        new SectorComplete(dwindsweptIslands),
                                         new Research(coalCentrifuge),
                                         new Research(conduit),
                                         new Research(wave)
                                 ), () -> {
-                                    node(dsimpact0078, Seq.with(
-                                            new SectorComplete(dstarFields),
+                                    node(dimpact0078, Seq.with(
+                                            new SectorComplete(dtarFields),
                                             new Research(Items.thorium),
                                             new Research(lancer),
                                             new Research(salvo),
                                             new Research(coreFoundation)
                                     ), () -> {
-                                        node(dsdesolateRift, Seq.with(
-                                                new SectorComplete(dsimpact0078),
+                                        node(ddesolateRift, Seq.with(
+                                                new SectorComplete(dimpact0078),
                                                 new Research(thermalGenerator),
                                                 new Research(thoriumReactor),
                                                 new Research(coreNucleus)
                                         ), () -> {
-                                            node(dsplanetaryTerminal, Seq.with(
-                                                    new SectorComplete(dsdesolateRift),
-                                                    new SectorComplete(dsnuclearComplex),
-                                                    new SectorComplete(dsovergrowth),
-                                                    new SectorComplete(dsextractionOutpost),
-                                                    new SectorComplete(dssaltFlats),
+                                            node(dplanetaryTerminal, Seq.with(
+                                                    new SectorComplete(ddesolateRift),
+                                                    new SectorComplete(dnuclearComplex),
+                                                    new SectorComplete(dovergrowth),
+                                                    new SectorComplete(dextractionOutpost),
+                                                    new SectorComplete(dsaltFlats),
                                                     new Research(risso),
                                                     new Research(minke),
                                                     new Research(bryde),
@@ -576,7 +578,7 @@ public class DSerpuloTechTree{
                                                     new Research(exponentialReconstructor),
                                                     new Research(tetrativeReconstructor)
                                             ), () -> {
-                                                node(dsgeothermalStronghold, Seq.with(
+                                                node(dgeothermalStronghold, Seq.with(
                                                         new Research(omura),
                                                         new Research(navanax),
                                                         new Research(eclipse),
@@ -588,7 +590,7 @@ public class DSerpuloTechTree{
 
                                                 });
 
-                                                node(dscruxscape, Seq.with(
+                                                node(dcruxscape, Seq.with(
                                                         new Research(omura),
                                                         new Research(navanax),
                                                         new Research(eclipse),
@@ -604,14 +606,14 @@ public class DSerpuloTechTree{
                                     });
                                 });
 
-                                node(dsfacility32m, Seq.with(
+                                node(dfacility32m, Seq.with(
                                         new Research(pneumaticDrill),
-                                        new SectorComplete(dsstainedMountains)
+                                        new SectorComplete(dstainedMountains)
                                 ), () -> {
-                                    node(dsextractionOutpost, Seq.with(
-                                            new SectorComplete(dswindsweptIslands),
-                                            new SectorComplete(dsfungalPass),
-                                            new SectorComplete(dsfacility32m),
+                                    node(dextractionOutpost, Seq.with(
+                                            new SectorComplete(dwindsweptIslands),
+                                            new SectorComplete(dfungalPass),
+                                            new SectorComplete(dfacility32m),
                                             new Research(groundFactory),
                                             new Research(nova),
                                             new Research(airFactory),
@@ -636,16 +638,16 @@ public class DSerpuloTechTree{
                                     });
                                 });
 
-                                node(dssaltFlats, Seq.with(
-                                        new SectorComplete(dswindsweptIslands),
-                                        new SectorComplete(dsfungalPass),
-                                        new SectorComplete(dsfrontier),
+                                node(dsaltFlats, Seq.with(
+                                        new SectorComplete(dwindsweptIslands),
+                                        new SectorComplete(dfungalPass),
+                                        new SectorComplete(dfrontier),
                                         new Research(groundFactory),
                                         new Research(additiveReconstructor),
                                         new Research(airFactory),
                                         new Research(door)
                                 ), () -> {
-                                    node(dstestingGrounds, Seq.with(
+                                    node(dtestingGrounds, Seq.with(
                                             new Research(cryofluidMixer),
                                             new Research(Liquids.cryofluid),
                                             new Research(waterExtractor),
@@ -654,16 +656,16 @@ public class DSerpuloTechTree{
 
                                     });
 
-                                    node(dscoastline, Seq.with(
-                                            new SectorComplete(dswindsweptIslands),
-                                            new SectorComplete(dssaltFlats),
+                                    node(dcoastline, Seq.with(
+                                            new SectorComplete(dwindsweptIslands),
+                                            new SectorComplete(dsaltFlats),
                                             new Research(navalFactory),
                                             new Research(payloadConveyor)
                                     ), () -> {
 
-                                        node(dsnavalFortress, Seq.with(
-                                                new SectorComplete(dscoastline),
-                                                new SectorComplete(dsextractionOutpost),
+                                        node(dnavalFortress, Seq.with(
+                                                new SectorComplete(dcoastline),
+                                                new SectorComplete(dextractionOutpost),
                                                 new Research(coreNucleus),
                                                 new Research(massDriver),
                                                 new Research(oxynoe),
@@ -672,8 +674,8 @@ public class DSerpuloTechTree{
                                                 new Research(cyclone),
                                                 new Research(ripple)
                                         ), () -> {
-                                            node(dsweatheredChannels, Seq.with(
-                                                    new SectorComplete(dsimpact0078),
+                                            node(dweatheredChannels, Seq.with(
+                                                    new SectorComplete(dimpact0078),
                                                     new Research(bryde),
                                                     new Research(surgeSmelter),
                                                     new Research(overdriveProjector)
@@ -687,32 +689,32 @@ public class DSerpuloTechTree{
                         });
                     });
 
-                    node(dsbiomassFacility, Seq.with(
-                            new SectorComplete(dsfrozenForest),
+                    node(dbiomassFacility, Seq.with(
+                            new SectorComplete(dfrozenForest),
                             new Research(powerNode),
                             new Research(steamGenerator),
                             new Research(scatter),
                             new Research(graphitePress)
                     ), () -> {
 
-                        node(dsstainedMountains, Seq.with(
-                                new SectorComplete(dsbiomassFacility),
+                        node(dstainedMountains, Seq.with(
+                                new SectorComplete(dbiomassFacility),
                                 new Research(pneumaticDrill),
                                 new Research(siliconSmelter)
                         ), () -> {
 
                             //TODO bad order
-                            node(dsinfestedCanyons, Seq.with(
-                                    new SectorComplete(dsfungalPass),
-                                    new SectorComplete(dsfrontier),
+                            node(dinfestedCanyons, Seq.with(
+                                    new SectorComplete(dfungalPass),
+                                    new SectorComplete(dfrontier),
                                     new Research(navalFactory),
                                     new Research(risso),
                                     new Research(minke),
                                     new Research(additiveReconstructor)
                             ), () -> {
                                 //TODO difficulty jump!
-                                node(dsnuclearComplex, Seq.with(
-                                        new SectorComplete(dsfungalPass),
+                                node(dnuclearComplex, Seq.with(
+                                        new SectorComplete(dfungalPass),
                                         new Research(thermalGenerator),
                                         new Research(laserDrill),
                                         new Research(Items.plastanium),
