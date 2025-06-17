@@ -12,7 +12,7 @@ import mindustry.type.Sector;
 
 import static mindustry.Vars.*;
 
-public class DangerousSerpulo extends Mod{
+public class Derpulo extends Mod{
 
 // идеи:
 //    1. спавн юнитов с взрывоопасным ресурсами
@@ -21,7 +21,7 @@ public class DangerousSerpulo extends Mod{
     public String name;
     private int steps =0;
 
-    public DangerousSerpulo() {}
+    public Derpulo() {}
 
     void DSLogInfo(String text) {
         Log.info("[" + tag +"] " + text);
@@ -30,7 +30,7 @@ public class DangerousSerpulo extends Mod{
     private void dSRunTurn() {
         steps++;
 
-        if(state.isCampaign() && state.getPlanet() == DSerpuloPlanet.dserpulo) {
+        if(state.isCampaign() && state.getPlanet() == DerpuloPlanet.derpulo) {
             for (Sector sector : state.getPlanet().sectors) {
 
                 //Instantly invasion on a captured sectors
@@ -70,7 +70,7 @@ public class DangerousSerpulo extends Mod{
         if (state.isCampaign()) {
             //Cleared sector after lose
             Events.on(EventType.SectorLoseEvent.class, e -> {
-                if (e.sector.planet == DSerpuloPlanet.dserpulo && e.sector.preset == null) {
+                if (e.sector.planet == DerpuloPlanet.derpulo && e.sector.preset == null) {
                     name = e.sector.info.name;
                     e.sector.save.delete();
                     DSLogInfo("sector " + name + " has been cleared by SectorLoseEvent");
@@ -79,7 +79,7 @@ public class DangerousSerpulo extends Mod{
             Events.on(EventType.GameOverEvent.class, e -> {
                 GameState s = state;
                 name = state.getSector().name();
-                if (s.isCampaign() && s.getPlanet() == DSerpuloPlanet.dserpulo && s.getSector().preset == null) {
+                if (s.isCampaign() && s.getPlanet() == DerpuloPlanet.derpulo && s.getSector().preset == null) {
                     state.getSector().save.delete();
                     state.rules.sector.save = null;
                     state.rules.sector.info.attack = true;
@@ -99,9 +99,9 @@ public class DangerousSerpulo extends Mod{
 
     @Override
     public void loadContent(){
-        DSerpuloPlanet.load();
-        DSerpuloSectorPresets.load();
-        DSerpuloTechTree.load();
+        DerpuloPlanet.load();
+        DerpuloSectorPresets.load();
+        DerpuloTechTree.load();
     }
 
     public void sectorInvasion(Sector sector) {
